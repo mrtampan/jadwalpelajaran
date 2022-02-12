@@ -86,6 +86,7 @@ $fullResult .= '</table>
 echo fwrite($file,$fullResult);
 fclose($file);
 echo "\n";
-echo "Berhasil tercreate " . "<a href='"."http://" . $_SERVER['SERVER_NAME'] . '/' . $filename."'>link</a>";
+// Hapus SERVER_PORT jika publish dihosting/cpanel
+echo "Berhasil tercreate " . "<a href='"."http://" . $_SERVER['SERVER_NAME'] . ':'. $_SERVER['SERVER_PORT'] . '/' . $filename."'>link</a>";
 
 ?>
